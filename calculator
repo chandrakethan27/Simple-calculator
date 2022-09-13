@@ -1,0 +1,37 @@
+
+print (logo)
+def add(n1 , n2):
+  return n1+n2
+def multiply(n1 , n2):
+  return n1*n2
+def subtract(n1 , n2):
+  return n1-n2
+def divide(n1 , n2):
+  return n1/n2
+
+def calci ():
+  calculator={
+    "+": add,
+    "*": multiply,
+    "-": subtract,
+    "/": divide,
+  }
+  num_1=float(input("Enter the first number: "))
+  num_2=float(input("Enter the second number: "))
+  for i in calculator:
+    print(i)
+  operation = input("Enter the operation: ")
+  if operation == "+":
+    print(add(num_1 , num_2))
+  elif operation == "*":
+    print(multiply(num_1 , num_2))
+  elif operation == "/":
+    print(divide(num_1 , num_2))
+  elif operation == "-":
+    print(subtract(num_1 , num_2))
+  continue_op=input("Do you want to continue? 'y'     for yes and 'n' for no: ")
+  if continue_op=="y":
+    calci()
+calci()
+    
+
